@@ -4,7 +4,7 @@
 React native demo
 =================
 
-This project is a **very basic** native front-end demo written in [React](https://reactjs.org/) using the Simplicit&eacute;&reg; node.js library.
+This project is a **very basic** native front-end demo written in [React native](https://facebook.github.io/react-native/) using the Simplicit&eacute;&reg; node.js library.
 
 Install:
 
