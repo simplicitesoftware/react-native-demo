@@ -1,10 +1,15 @@
 ![Simplicit&eacute; Software](https://www.simplicite.io/resources/logos/logo250.png)
-***
+* * *
 
-React native demo
-=================
+ReactNative&reg; demo
+=====================
 
-This project is a **very basic** native front-end demo written in [React native](https://facebook.github.io/react-native/) using the Simplicit&eacute;&reg; node.js library.
+This project is a **very basic** native front-end demo written in [ReactNative&reg;](https://facebook.github.io/react-native/)
+using the [Simplicit&eacute;&reg; node.js &amp; browser library](ihttps://github.com/simplicitesoftware/nodejs-api).
+
+Prerequisites:
+
+	sudo npm install -g create-react-native-app
 
 Install:
 
