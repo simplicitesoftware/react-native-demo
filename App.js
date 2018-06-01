@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, Image, View, ListView } from 'react-native';
 
 global.debug = true;
 global.Buffer = global.Buffer || require('buffer').Buffer; // ZZZ required by simplicite lib ZZZ
@@ -30,12 +30,20 @@ export class Demo extends React.Component {
 		});
 	}
 
-	/*{ this.state.login && xDemoProduct/x }*/
+	//
 	render() {
 		return (
-			<View>
-				<Text>{ this.state.login ? 'Hello ' + this.state.login + '!' : '' }</Text>
+			{ this.state.login &&
+			<View style={ styles.demo }>
+				<View style={ styles.user }>
+					<Image style={{ width: 50, height: 50 }} source={{ uri: 'data:' + this.state.picture.mime + ';base64,' +  this.state.picture.content }}/>
+					<Text>{ this.state.login ? 'Hello ' + this.state.login + '!' : '' }</Text>
+				</View>
+				<View style={ styles.products }>
+					{ this.state.login && <DemoProduct/> }
+				</View>
 			</View>
+			}
 		);
 	}
 };
@@ -43,20 +51,29 @@ export class Demo extends React.Component {
 export class DemoProduct extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		global.DemoProductDS = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+		this.state = { ds: global.DemoProductDS.cloneWithRows([]) };
 	}
 
 	componentWillMount() {
 		let self = this;
 		let prd = global.app.getBusinessObject('DemoProduct');
-		prd.search(null, { inlineThumbs: true }).then(function(list) {
-			self.setState({ list: list });
+		prd.search(null, { inlineThumbs: false }).then(function(list) {
+			let products = [];
+			for (let item of list)
+				products.push(item.demoPrdName);
+			console.log(products);
+			self.setState({ ds: global.DemoProductDS.cloneWithRows(products) });
 		});
 	}
 
 	render() {
 		return (
-			<FlatList data={ this.state.list } renderItem={ (item) => <Text>{ item.demoPrdName }</Text> } />
+			<ListView
+				enableEmptySections={ true }
+				dataSource={ this.state.ds }
+				renderRow={ (row) => <Text>{ row }</Text> }
+			/>
 	   );
 	}
 };
@@ -74,8 +91,23 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#fff',
+		backgroundColor: '#ffffff'
+	},
+	demo: {
+		flex: 1,
+		padding: 20,
+		backgroundColor: '#4682b4'
+	},
+	user: {
+		flex: 1,
+		padding: 20,
+		backgroundColor: '#87ceeb',
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
+	products: {
+		flex: 5,
+		padding: 20,
+		backgroundColor: '#f0f0f0'
+	}
 });
