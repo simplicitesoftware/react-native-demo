@@ -9,7 +9,7 @@ using the [Simplicit&eacute;&reg; node.js &amp; browser library](ihttps://github
 
 Prerequisites:
 
-	sudo npm install -g create-react-native-app
+	sudo npm install -g react-native-cli
 
 Install:
 
@@ -18,6 +18,23 @@ Install:
 Run in dev mode:
 
         npm start
+
+Android
+-------
+
+**TODO**: to be completed
+
+	react-native eject
+	mkdir -p android/app/src/main/assets
+	rm -fr android/app/build
+	react-native bundle --platform android --dev false --entry-file App.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+	cd android
+	gradle assembleDebug
+
+iOS
+---
+
+**TODO**: to be completed
 
 License
 =======
