@@ -1,5 +1,14 @@
 {
+  "name": "Demo",
+  "displayName": "Simplicite + ReactNative demo",
+  "version": "1.0.0",
   "expo": {
     "sdkVersion": "27.0.0"
+  },
+  "android": {
+    "package": "com.simplicite.demo"
+  },
+  "ios": {
+    "bundleIdentifier": "com.simplicite.demo"
   }
 }
