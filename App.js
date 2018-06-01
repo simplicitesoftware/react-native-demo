@@ -33,17 +33,15 @@ export class Demo extends React.Component {
 	//
 	render() {
 		return (
-			{ this.state.login &&
 			<View style={ styles.demo }>
-				<View style={ styles.user }>
+				{ this.state.login && <View style={ styles.user }>
 					<Image style={{ width: 50, height: 50 }} source={{ uri: 'data:' + this.state.picture.mime + ';base64,' +  this.state.picture.content }}/>
 					<Text>{ this.state.login ? 'Hello ' + this.state.login + '!' : '' }</Text>
-				</View>
-				<View style={ styles.products }>
-					{ this.state.login && <DemoProduct/> }
-				</View>
+				</View> }
+				{ this.state.login && <View style={ styles.products }>
+					<DemoProduct/>
+				</View> }
 			</View>
-			}
 		);
 	}
 };
