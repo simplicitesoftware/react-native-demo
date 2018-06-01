@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, Image, View, ListView } from 'react-native';
 
 global.debug = true;
-global.Buffer = global.Buffer || require('buffer').Buffer; // ZZZ required by simplicite lib ZZZ
 
 export class Demo extends React.Component {
 	constructor(props) {
