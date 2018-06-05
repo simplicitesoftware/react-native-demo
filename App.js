@@ -100,9 +100,7 @@ const styles = StyleSheet.create({
 	demo: {
 		flex: 1,
 		paddingTop: 25,
-		paddingHorizontal: 5,
-		paddingBottom: 5,
-		backgroundColor: '#4682b4'
+		backgroundColor: '#000000'
 	},
 	user: {
 		flex: 1,
