@@ -37,7 +37,6 @@ export class Demo extends React.Component {
 		});
 	}
 
-	//
 	render() {
 		return (
 			<View style={ styles.demo }>
