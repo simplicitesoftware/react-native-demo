@@ -41,7 +41,7 @@ export class Demo extends React.Component {
 		return (
 			<View style={ styles.demo }>
 				{ this.state.login && <View style={ styles.user }>
-					<Image style={{ width: 50, height: 50 }} source={{ uri: 'data:' + this.state.picture.mime + ';base64,' +  this.state.picture.content }}/>
+					<Image style={{ width: 50, height: 50 }} source={{ uri: 'data:' + this.state.picture.mime + ';base64,' + this.state.picture.content }}/>
 					<Text>{ this.state.login ? 'Hello ' + this.state.login + '!' : '' }</Text>
 				</View> }
 				{ this.state.login && <View style={ styles.products }>
@@ -61,7 +61,7 @@ export class DemoProduct extends React.Component {
 	componentWillMount() {
 		let self = this;
 		let prd = global.app.getBusinessObject('DemoProduct');
-		prd.search(null, { inlineThumbs: false }).then(function(list) {
+		prd.search(null, { inlineThumbs: true }).then(function(list) {
 			self.setState({ list: list });
 		});
 	}
@@ -71,7 +71,12 @@ export class DemoProduct extends React.Component {
 			<FlatList
 				data={ this.state.list }
 				keyExtractor={ (item, index) => item.row_id }
-				renderItem={ ({ item }) => <Text key={ item.row_id }>{ item.demoPrdName }</Text> }
+				renderItem={ ({ item }) => <View>
+					<Image style={{ width: 50, height: 50 }} source={{ uri: 'data:image/png;base64,' + item.demoPrdPicture.thumbnail }}/>
+					<Text style={ styles.productname }>{ item.demoPrdName }</Text>
+					<Text style={ styles.productreference }>{ item.demoPrdReference }</Text>
+					<Text style={ styles.productdescription }>{ item.demoPrdDescription }</Text>
+				</View> }
 			/>
 	   );
 	}
@@ -108,5 +113,16 @@ const styles = StyleSheet.create({
 		flex: 5,
 		padding: 20,
 		backgroundColor: '#f0f0f0'
+	},
+	productname: {
+		fontWeight: 'bold'
+	},
+	productreference: {
+		color: '#707070'
+	},
+	productdescription: {
+		padding: 10,
+		marginBottom: 15,
+		backgroundColor: '#e0e0e0'
 	}
 });
