@@ -27,7 +27,7 @@ export class Demo extends React.Component {
 		let self = this;
 		global.app.login().then(function(params) {
 			if (global.debug) console.log('Logged in as ' + params.username);
-			return global.app.getGrant({ inlinePicture: true });
+			return global.app.getGrant();
 		}).fail(function(reason) {
 			global.app = undefined;
 			console.error('Login failed (status: ' + reason.status + ', message: ' + reason.message + ')');
@@ -41,7 +41,7 @@ export class Demo extends React.Component {
 		return (
 			<View style={ styles.demo }>
 				{ this.state.login && <View style={ styles.user }>
-					<Image style={{ width: 50, height: 50 }} source={{ uri: 'data:' + this.state.picture.mime + ';base64,' + this.state.picture.content }}/>
+					<Image style={{ width: 250, height: 50 }} source={{ uri: 'https://www.simplicite.io/resources/logos/logo250.png' }}/>
 					<Text>{ this.state.login ? 'Hello ' + this.state.login + '!' : '' }</Text>
 				</View> }
 				{ this.state.login && <View style={ styles.products }>
