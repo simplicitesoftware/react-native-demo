@@ -6,7 +6,7 @@
  * This example is using the Simplicite node.js & browser JavaScript API
  */
 import React from 'react';
-import { StyleSheet, Text, Image, View, ListView } from 'react-native';
+import { StyleSheet, Text, Image, View, FlatList } from 'react-native';
 import Simplicite from 'simplicite';
 
 global.debug = false;
@@ -55,28 +55,23 @@ export class Demo extends React.Component {
 export class DemoProduct extends React.Component {
 	constructor(props) {
 		super(props);
-		global.DemoProductDS = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-		this.state = { ds: global.DemoProductDS.cloneWithRows([]) };
+		this.state = { list: [] };
 	}
 
 	componentWillMount() {
 		let self = this;
 		let prd = global.app.getBusinessObject('DemoProduct');
 		prd.search(null, { inlineThumbs: false }).then(function(list) {
-			let products = [];
-			for (let item of list)
-				products.push(item.demoPrdName);
-			console.log(products);
-			self.setState({ ds: global.DemoProductDS.cloneWithRows(products) });
+			self.setState({ list: list });
 		});
 	}
 
 	render() {
 		return (
-			<ListView
-				enableEmptySections={ true }
-				dataSource={ this.state.ds }
-				renderRow={ (row) => <Text>{ row }</Text> }
+			<FlatList
+				data={ this.state.list }
+				keyExtractor={ (item, index) => item.row_id }
+				renderItem={ ({ item }) => <Text key={ item.row_id }>{ item.demoPrdName }</Text> }
 			/>
 	   );
 	}
