@@ -6,7 +6,7 @@
  * This example is using the Simplicite node.js & browser JavaScript API
  */
 import React from 'react';
-import { StyleSheet, Text, Image, View, FlatList } from 'react-native';
+import { StyleSheet, Text, Image, View, ScrollView, FlatList } from 'react-native';
 import Simplicite from 'simplicite';
 
 global.debug = false;
@@ -27,7 +27,7 @@ export class Demo extends React.Component {
 		let self = this;
 		global.app.login().then(function(params) {
 			if (global.debug) console.log('Logged in as ' + params.username);
-			return global.app.getGrant({ inlinePicture: true }); // next promise
+			return global.app.getGrant({ inlinePicture: true });
 		}).fail(function(reason) {
 			global.app = undefined;
 			console.error('Login failed (status: ' + reason.status + ', message: ' + reason.message + ')');
@@ -72,9 +72,13 @@ export class DemoProduct extends React.Component {
 				data={ this.state.list }
 				keyExtractor={ (item, index) => item.row_id }
 				renderItem={ ({ item }) => <View>
-					<Image style={{ width: 50, height: 50 }} source={{ uri: 'data:image/png;base64,' + item.demoPrdPicture.thumbnail }}/>
-					<Text style={ styles.productname }>{ item.demoPrdName }</Text>
-					<Text style={ styles.productreference }>{ item.demoPrdReference }</Text>
+					<ScrollView horizontal={ true }>
+						<Image style={{ width: 50, height: 50 }} source={{ uri: 'data:image/png;base64,' + item.demoPrdPicture.thumbnail }}/>
+						<View>
+							<Text style={ styles.productname }>{ item.demoPrdName }</Text>
+							<Text style={ styles.productreference }>{ item.demoPrdReference }</Text>
+						</View>
+					</ScrollView>
 					<Text style={ styles.productdescription }>{ item.demoPrdDescription }</Text>
 				</View> }
 			/>
