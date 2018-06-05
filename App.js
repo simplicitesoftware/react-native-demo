@@ -99,19 +99,21 @@ const styles = StyleSheet.create({
 	},
 	demo: {
 		flex: 1,
-		padding: 20,
+		paddingTop: 25,
+		paddingHorizontal: 5,
+		paddingBottom: 5,
 		backgroundColor: '#4682b4'
 	},
 	user: {
 		flex: 1,
-		padding: 20,
+		padding: 15,
 		backgroundColor: '#87ceeb',
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
 	products: {
 		flex: 5,
-		padding: 20,
+		padding: 10,
 		backgroundColor: '#f0f0f0'
 	},
 	productname: {
