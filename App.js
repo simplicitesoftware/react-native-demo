@@ -118,11 +118,13 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold'
 	},
 	productreference: {
+		fontStyle: 'italic',
 		color: '#707070'
 	},
 	productdescription: {
 		padding: 10,
 		marginBottom: 15,
+		borderRadius: 10,
 		backgroundColor: '#e0e0e0'
 	}
 });
