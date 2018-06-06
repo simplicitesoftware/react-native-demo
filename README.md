@@ -1,10 +1,10 @@
 ![Simplicit&eacute; Software](https://www.simplicite.io/resources/logos/logo250.png)
 * * *
 
-ReactNative&reg; demo
-=====================
+React Native&reg; demo
+======================
 
-This project is a **very basic** native front-end demo written in [ReactNative&reg;](https://facebook.github.io/react-native/)
+This project is a **very basic** native front-end demo written in [React Native&reg;](https://facebook.github.io/react-native/)
 using the [Simplicit&eacute;&reg; node.js &amp; browser library](ihttps://github.com/simplicitesoftware/nodejs-api).
 
 Prerequisites:
