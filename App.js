@@ -27,13 +27,13 @@ export class Demo extends React.Component {
 		let self = this;
 		global.app.login().then(function(params) {
 			if (global.debug) console.log('Logged in as ' + params.username);
-			return global.app.getGrant();
+			global.app.getGrant().then(function(grant) {
+				if (!global.app) return;
+				self.setState(grant);
+			});
 		}).fail(function(reason) {
 			global.app = undefined;
 			console.error('Login failed (status: ' + reason.status + ', message: ' + reason.message + ')');
-		}).then(function(grant) {
-			if (!global.app) return;
-			self.setState(grant);
 		});
 	}
 
