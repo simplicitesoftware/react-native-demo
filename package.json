@@ -1,13 +1,8 @@
 {
   "name": "react-native-demo",
   "description": "React native demo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "react-native-scripts": "1.14.0",
-    "jest-expo": "~27.0.0",
-    "react-test-renderer": "16.3.1"
-  },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
     "start": "react-native-scripts start",
@@ -20,10 +15,15 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^27.0.1",
-    "react": "16.3.1",
-    "react-native": "~0.55.2",
-    "simplicite": "^1.0.5"
+    "expo": "^32.0.6",
+    "react": "~16.8.6",
+    "react-native": "~0.59.8",
+    "simplicite": "^1.0.6"
+  },
+  "devDependencies": {
+    "react-native-scripts": "~2.0.1",
+    "jest-expo": "~33.0.1",
+    "react-test-renderer": "~16.8.6"
   },
   "repository": {
     "type": "git",
