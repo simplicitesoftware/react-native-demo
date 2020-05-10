@@ -7,19 +7,15 @@ React Native&reg; demo
 This project is a **very basic** native front-end demo written in [React Native&reg;](https://facebook.github.io/react-native/)
 using the [Simplicit&eacute;&reg; node.js &amp; browser library](ihttps://github.com/simplicitesoftware/nodejs-api).
 
-Prerequisites:
-
-```bash
-sudo npm install -g react-native-cli
-```
-
-Install:
+Install
+-------
 
 ```bash
 npm install
 ```
 
-Run in dev mode:
+Run in dev mode
+---------------
 
 ```bash
 npm start
