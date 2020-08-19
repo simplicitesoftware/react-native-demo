@@ -16,13 +16,13 @@
   },
   "dependencies": {
     "expo": "^32.0.6",
-    "react": "^16.8.6",
+    "react": "^16.13.1",
     "react-native": "^0.59.10",
     "simplicite": "latest"
   },
   "devDependencies": {
     "jest-expo": "^33.0.2",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.13.1"
   },
   "repository": {
     "type": "git",
