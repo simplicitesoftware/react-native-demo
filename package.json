@@ -1,7 +1,7 @@
 {
   "name": "react-native-demo",
   "description": "React native demo",
-  "version": "2.2.8",
+  "version": "2.2.9",
   "license": "Apache-2.0",
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "expo": "^43.0.1",
     "react": "^17.0.2",
     "react-native": "^0.66.2",
-    "simplicite": "^2.2.8"
+    "simplicite": "^2.2.9"
   },
   "devDependencies": {
     "expo-cli": "^4.12.12",
