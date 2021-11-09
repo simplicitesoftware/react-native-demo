@@ -2,18 +2,11 @@
   "name": "react-native-demo",
   "description": "React native demo",
   "version": "2.2.10",
+  "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
-  "scripts": {
-    "start": "expo start",
-    "eject": "expo eject",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "test": "jest",
-    "ncu": "ncu"
-  },
-  "jest": {
-    "preset": "jest-expo"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simplicitesoftware/react-native-demo.git"
   },
   "dependencies": {
     "expo": "^43.0.2",
@@ -27,8 +20,16 @@
     "npm-check-updates": "^12.0.0",
     "react-test-renderer": "^17.0.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/simplicitesoftware/react-native-demo.git"
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "expo start",
+    "eject": "expo eject",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "test": "jest",
+    "ncu": "ncu"
+  },
+  "jest": {
+    "preset": "jest-expo"
   }
 }
