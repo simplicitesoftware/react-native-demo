@@ -1,7 +1,7 @@
 {
   "name": "react-native-demo",
   "description": "React native demo",
-  "version": "2.2.12",
+  "version": "2.2.14",
   "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
   "repository": {
@@ -12,7 +12,7 @@
     "expo": "^43.0.2",
     "react": "^17.0.2",
     "react-native": "^0.66.3",
-    "simplicite": "^2.2.12"
+    "simplicite": "^2.2.14"
   },
   "devDependencies": {
     "expo-cli": "^4.13.0",
