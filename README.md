@@ -11,7 +11,7 @@ Install
 -------
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 Run in dev mode
