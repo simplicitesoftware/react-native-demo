@@ -1,7 +1,7 @@
 {
   "name": "react-native-demo",
   "description": "React native demo",
-  "version": "2.2.33",
+  "version": "2.2.34",
   "author": "Simplicite Software <contact@simplicitesoftware.com> (http://www.simplicitesoftware.com/)",
   "license": "Apache-2.0",
   "repository": {
@@ -9,15 +9,15 @@
     "url": "git://github.com/simplicitesoftware/react-native-demo.git"
   },
   "dependencies": {
-    "expo": "^49.0.10",
+    "expo": "^49.0.11",
     "react": "^18.2.0",
     "react-native": "^0.72.4",
-    "simplicite": "^2.2.33"
+    "simplicite": "^2.2.34"
   },
   "devDependencies": {
     "expo-cli": "^6.3.12",
     "jest-expo": "^49.0.0",
-    "npm-check-updates": "^16.14.2",
+    "npm-check-updates": "^16.14.4",
     "react-test-renderer": "^18.2.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
