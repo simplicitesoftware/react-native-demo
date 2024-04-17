@@ -9,15 +9,15 @@
     "url": "git://github.com/simplicitesoftware/react-native-demo.git"
   },
   "dependencies": {
-    "expo": "^50.0.4",
+    "expo": "^50.0.17",
     "react": "^18.2.0",
-    "react-native": "^0.73.3",
+    "react-native": "^0.73.6",
     "simplicite": "^3.0.1"
   },
   "devDependencies": {
     "expo-cli": "^6.3.12",
-    "jest-expo": "^50.0.1",
-    "npm-check-updates": "^16.14.14",
+    "jest-expo": "^50.0.4",
+    "npm-check-updates": "^16.14.18",
     "react-test-renderer": "^18.2.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
