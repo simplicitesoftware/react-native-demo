@@ -90,7 +90,7 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<View style={ styles.container }>
-				<Demo url='https://demo.dev.simplicite.io' username='website' password='simplicite'/>
+				<Demo url='https://demo.dev2.simplicite.io' username='website' password='simplicite'/>
 			</View>
 		);
 	}
