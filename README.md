@@ -5,7 +5,7 @@ React Native&reg; demo
 ======================
 
 This project is a **very basic** native front-end demo written in [React Native&reg;](https://facebook.github.io/react-native/)
-using the [Simplicit&eacute;&reg; node.js &amp; browser library](ihttps://github.com/simplicitesoftware/nodejs-api).
+the [Simplicit&eacute;&reg; node.js&reg; &amp; brower JavaScript API](https://www.npmjs.com/package/simplicite)
 
 Install
 -------
@@ -43,7 +43,7 @@ iOS
 License
 =======
 
-Copyright 2014-2021 Simplicit&eacute; Software
+Copyright 2018-2024 Simplicit&eacute; Software
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
